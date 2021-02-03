@@ -1,0 +1,44 @@
+.wrapper{
+  display: flex;
+}
+
+.side_bar{
+  background-color: #253141;
+  width: 300px;
+  height: 100vh;
+}
+
+.side_chat_header{
+  height: 100px;
+  padding: 0 20px;
+}
+
+.room{
+  background-color: #2f3e51;
+  height: calc(100vh - 100px);
+  padding: 0 20px;
+}
+
+.main_chat{
+  background-color: #ffffff;
+  width: calc(100vw - 300px);
+  /* height: 100vh; これはなくてもOK。横並びかつ「side_bar」クラスが100vhの為。また、heightの初期値は「auto」の為、親子要素のどこかの固定値へ自動で揃う*/
+}
+
+.main_chat_header{
+  height: 100px;
+  padding: 0 40px;
+}
+
+.message{
+  background-color: #fafafa;
+  height: calc(100vh - (100px + 90px));
+  padding: 46px 40px 0;
+}
+
+.form{
+  background-color: #dddddd;
+  height: 90px;
+  padding: 20px 40px;
+}
+
