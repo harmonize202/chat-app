@@ -1,5 +1,7 @@
 <div class='chat-room-form'>
   <h1>新規チャットルーム</h1>
+  <%# ここではnewアクションが実行された際にやり取りされるデータ(params。ここでは@room)に何を格納するかも決めている。 %>
+  <%# また、value属性は「送信されるデータ」を指す。 %>
   <%=form_with model: @room, local: true do |f|%>
     <div class='chat-room-form__field'>
       <div class='chat-room-form__field--left'>
@@ -16,6 +18,15 @@
         <label class='chat-room-form__label' for='chat_room_チャットメンバー'>チャットメンバー</label>
       </div>
       <div class='chat-room-form__field--right'>
+        <%# キー：room、バリュー：「user_id」を複数保存する為。ハッシュの中のハッシュの中の配列 %>
+        <select name="room[user_ids][]">
+          <option value="">チャットするユーザーを選択してください</option>
+          <% User.where.not(id: current_user.id).each do |user| %>
+            <option value=<%= user.id %>><%= user.name %></option>
+          <% end %>
+        </select>
+        <%# 現在ログイン中のユーザーが持つidをparamsに含める %>
+        <input name="room[user_ids][]" type="hidden" value=<%= current_user.id %>>
       </div>
     </div>
     <div class='chat-room-form__field'>
