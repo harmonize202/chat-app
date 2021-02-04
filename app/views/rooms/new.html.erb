@@ -2,6 +2,7 @@
   <h1>新規チャットルーム</h1>
   <%# ここではnewアクションが実行された際にやり取りされるデータ(params。ここでは@room)に何を格納するかも決めている。 %>
   <%# また、value属性は「送信されるデータ」を指す。 %>
+  <%# 今回はroomsテーブルにデータ保存したい為、modelに@roomを選択 %>
   <%=form_with model: @room, local: true do |f|%>
     <div class='chat-room-form__field'>
       <div class='chat-room-form__field--left'>
