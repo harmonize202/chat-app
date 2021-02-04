@@ -6,5 +6,7 @@ Rails.application.routes.draw do
   # ユーザー編集画面を作成する為
   resources :users, only: [:edit, :update]
   #新規チャットルームを作成する為
-  resources :rooms, only: [:new, :create]
+  resources :rooms, only: [:new, :create] do
+    resources :messages, only: [:index, :create]
+  end
 end
