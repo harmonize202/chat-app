@@ -1,0 +1,163 @@
+.wrapper{
+  display: flex;
+}
+
+.side_bar{
+  background-color: #253141;
+  width: 300px;
+  height: 100vh;
+}
+
+.side_chat_header{
+  height: 100px;
+  padding: 0 20px;
+  /* background-color: #253141; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header_name a{
+  font-size: 16px;
+  color: #fafafa;
+  /* これはリンク先の下線を消す為 */
+  text-decoration: none;
+}
+
+.create_room a{
+  font-size: 10px;
+  padding: 14px;
+  border: 1px solid lightblue;
+  color: deepskyblue;
+  /* これはリンク先の下線を消す為 */
+  text-decoration: none;
+}
+
+.rooms{
+  background-color: #2f3e51;
+  height: calc(100vh - 100px);
+  padding: 0 20px;
+  /* はみ出したらスクロールできるよう。 */
+  overflow: scroll;
+}
+
+.room{
+  padding: 20px 0 40px;
+}
+
+.room_name a{
+  color: white;
+  /* text-align: left; これは無くても勝手に左端に表示される*/
+  text-decoration: none;
+}
+
+.main_chat{
+  background-color: #ffffff;
+  width: calc(100vw - 300px);
+  /* height: 100vh; これはなくてもOK。横並びかつ「side_bar」クラスが100vhの為。また、heightの初期値は「auto」の為、親子要素のどこかの固定値へ自動で揃う*/
+}
+
+.main_chat_header{
+  height: 100px;
+  padding: 0 40px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header_title{
+  color: #333;
+  font-size: 24px;
+  margin-top: 36px;
+}
+
+.header_botton{
+  margin-top: 36px;
+}
+
+.header_botton a{
+  border: 1px solid darkred;
+  text-decoration: none;
+  padding: 20px;
+  color: darkred;
+}
+
+.messages{
+  background-color: #fafafa;
+  height: calc(100vh - (100px + 90px));
+  padding: 46px 40px 0;
+  overflow: scroll;
+}
+
+.message{
+  padding: 10px 0 0 0;
+}
+
+.upper_message{
+  display: flex;
+}
+
+.message_user{
+  font-size: 16px;
+  color: #434a54;
+}
+
+.message_date{
+  font-size: 12px;
+  color: #999;
+  margin-left: 10px;
+}
+
+.lower_message{
+  margin-top: 10px;
+}
+
+.message1{
+  font-size: 14px;
+  color: #434a54;
+  margin-bottom: 40px;
+}
+
+.form{
+  background-color: #dddddd;
+  height: 90px;
+  padding: 20px 40px;
+  display: flex;
+}
+
+.form_input{
+  background-color: white;
+  display: flex;
+  width: 100vw;
+}
+
+.form_message{
+  padding-left: 10px;
+  border: none;
+  height: 50px;
+  width: 100%;
+}
+
+.form_submit{
+  background-color: #38aef0;
+  border: none;
+  padding: 0 20px;
+  margin-left: 15px;
+  height: 50px;
+  font-size: 16px;
+  color: white;
+}
+
+.form_image{
+  background-color: lightblue;
+  border: none;
+  padding: 12px;
+  font-size: 12px;
+  color: white;
+  width: 60px;
+  margin: 5px 10px;
+  text-align: center;
+}
+
+.hidden{
+  display: none;
+}
