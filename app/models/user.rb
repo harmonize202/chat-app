@@ -7,4 +7,7 @@ class User < ApplicationRecord
   # nameカラムが空の場合、エラーを返す(バリデーションされる)為。
   validates :name, presence: true
 
+  has_many :room_users
+  has_many :rooms, through: :room_users
+
 end
